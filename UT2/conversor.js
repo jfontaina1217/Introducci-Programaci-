@@ -1,0 +1,26 @@
+const prompt = require("prompt-sync")();
+
+const kb = 1024
+const mb = (kb * 1024)
+const gb = (mb * 1024)
+
+console.log("=============== CONVERSOR DE UNIDADES de Joaquin ================")
+let MidaEnBytes = prompt("Por favor, introduzca una medida en B ")
+console.log(`Esta medida en KB es ${Number(MidaEnBytes) / Number(kb)}`)
+console.log(`Esta medida en MB es ${Number(MidaEnBytes) / Number(mb)}`)
+console.log(`Esta medida en GB es ${Number(MidaEnBytes) / Number(gb)}`)
+console.log("=================================================================")
+let MidaEnGigabytes = prompt("Por favor, introduzca una medida en GB ")
+console.log(`Esta medida en B es ${Number(MidaEnGigabytes) * Number(gb)}`)
+console.log("=================================================================")
+let MidaDelPaquete = prompt("Por favor, introduzca la medida del paquete en GB ")
+let Velocidad = prompt("Por favor, introduzca la velocidad del paquete en Mbps ")
+let MidaDelPaqueteEnBytes = (MidaDelPaquete * gb)
+console.log(`Medida del paquete: ${MidaDelPaquete}GB`)
+let MidaDelPaqueteEnBits = (MidaDelPaqueteEnBytes * 8)
+console.log(`Medida del paquete en bits: ${MidaDelPaqueteEnBits}`)
+let VelocidadEnBytes = (Velocidad * mb)
+let VelocidadEnBits = (VelocidadEnBytes * 8)
+let DescargaEnBits = (MidaDelPaqueteEnBits / VelocidadEnBits)
+console.log(`La descarga del paquete se llevara a cabo en ${DescargaEnBits} segundos`)
+console.log(`La descarga del paquete se llevara a cabo en ${DescargaEnBits / 60} minutos`)
