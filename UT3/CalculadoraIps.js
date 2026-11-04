@@ -8,7 +8,7 @@ let octeto3 = Number(prompt("Introduzca el numero del tercer octeto "))
 let octeto4 = Number(prompt("Introduzca el numero del cuarto octeto "))
 
 let correcta = (undefined)
-if ( octeto1 >= 0 && octeto1 <= 255 && octeto2 >= 0 && octeto2 <= 255 && octeto3 >= 0 && octeto3 <= 255 && octeto4 >= 0 && octeto4 <= 255) {
+if ( octeto1 >= 0 && octeto1 <= 255 && octeto2 >= 0 && octeto2 <= 255 && octeto3 >= 0 && octeto3 <= 255 && octeto4 >= 0 && octeto4 <= 255 ) {
     console.log()
     console.log(`La IP introducida es ${octeto1}.${octeto2}.${octeto3}.${octeto4}`)
     correcta = true
@@ -19,14 +19,12 @@ if ( octeto1 >= 0 && octeto1 <= 255 && octeto2 >= 0 && octeto2 <= 255 && octeto3
 }
 
 let clase = (undefined)
-let loopback = (false)
 let mascdefecte = ("No hi ha per defecte")
 if (octeto1 >= 1 && octeto1 <= 126) {
     clase = "A"
     mascdefecte = "255.0.0.0"
 } else if (octeto1 == 127) {
     clase = "Loopback"
-    loopback = true
 } else if (octeto1 >= 128 && octeto1 <= 191) {
     clase = "B"
     mascdefecte = "255.255.0.0"
@@ -61,7 +59,7 @@ if (octeto1 == 10) {
 if (correcta == true) {
     console.log(`Clase: ${clase}`)
     console.log(`Mascara por defecto: ${mascdefecte}`)
-    if (privada == true && loopback == false) {
+    if (privada == true && clase == "Loopback") {
       console.log("Tipus: Privada")
     } else {
       console.log("Tipus: Pública")
