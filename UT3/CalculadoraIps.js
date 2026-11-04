@@ -61,7 +61,7 @@ if (octeto1 == 10) {
 if (correcta == true) {
     console.log(`Clase: ${clase}`)
     console.log(`Mascara por defecto: ${mascdefecte}`)
-    if (clase == true && loopback == false) {
+    if (privada == true && loopback == false) {
       console.log("Tipus: Privada")
     } else {
       console.log("Tipus: Pública")
