@@ -2,6 +2,7 @@ const prompt = require("prompt-sync")();
 
 console.log("=============== Calculadora de IPs de Joaquin ================")
 
+//Introducir IP
 let octeto1 = Number(prompt("Introduzca el numero del primer octeto "))
 let octeto2 = Number(prompt("Introduzca el numero del segundo octeto "))
 let octeto3 = Number(prompt("Introduzca el numero del tercer octeto "))
@@ -18,6 +19,7 @@ if ( octeto1 >= 0 && octeto1 <= 255 && octeto2 >= 0 && octeto2 <= 255 && octeto3
     correcta = false
 }
 
+// Identificar la clase
 let clase = (undefined)
 let mascdefecte = ("No hi ha per defecte")
 if (octeto1 >= 1 && octeto1 <= 126) {
@@ -45,6 +47,7 @@ if (Boolean(clase) != true) {
     clase = "No hi ha per defecte"
 }
 
+//Identificar si es privada o no
 let privada = (undefined)
 if (octeto1 == 10) {
     privada = true
@@ -56,6 +59,7 @@ if (octeto1 == 10) {
     privada = false
 }
 
+//Resultado, si la mascara es incorrecta no muestra nada, solo un mensaje de error.
 if (correcta == true) {
     console.log(`Clase: ${clase}`)
     console.log(`Mascara por defecto: ${mascdefecte}`)
