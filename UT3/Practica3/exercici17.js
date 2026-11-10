@@ -1,4 +1,4 @@
-// Cas A. Sortira accés demegat perque es compleix una de les dues comprobacions demanades.
+// Cas A. Sortira accés denegat perque es compleix una de les dues comprobacions demanades.
 let hora = 9;
 if (hora < 10 || hora > 18) {
 console.log("Accés denegat");
