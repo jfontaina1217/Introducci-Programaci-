@@ -8,6 +8,7 @@ let octeto2 = Number(prompt("Introduzca el numero del segundo octeto "))
 let octeto3 = Number(prompt("Introduzca el numero del tercer octeto "))
 let octeto4 = Number(prompt("Introduzca el numero del cuarto octeto "))
 
+//Identificar si es correcta
 let correcta = (undefined)
 if ( octeto1 >= 0 && octeto1 <= 255 && octeto2 >= 0 && octeto2 <= 255 && octeto3 >= 0 && octeto3 <= 255 && octeto4 >= 0 && octeto4 <= 255 ) {
     console.log()
